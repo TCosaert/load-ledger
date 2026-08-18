@@ -11,9 +11,10 @@
 <meta name="apple-mobile-web-app-title" content="Load Ledger">
 
 <!-- ============================================================
-     ONE THING TO EDIT: put your published artifact URL below.
-     It looks like https://claude.ai/public/artifacts/<id>
-     Replace it in BOTH places marked ARTIFACT_URL.
+     Wrapper for the Load Ledger artifact.
+     Frame source: claude.site embed endpoint (must be allow-listed
+     for this domain in the artifact's "Get embed code" settings).
+     Escape link: claude.ai top-level public URL.
      ============================================================ -->
 
 <!-- Icon: three ledger bars. Inline so there are no extra files. -->
@@ -45,17 +46,18 @@
 </head>
 <body>
 
-<!-- ARTIFACT_URL (1 of 2) -->
+<!-- Embed endpoint (claude.site), allow-listed for tcosaert.github.io -->
 <iframe
   id="frame"
-  src="https://claude.ai/public/artifacts/e50d90d5-0ba1-4372-9621-b3d939eaa5e1"
+  src="https://claude.site/public/artifacts/e50d90d5-0ba1-4372-9621-b3d939eaa5e1/embed"
   title="Load Ledger"
+  frameborder="0"
   allow="clipboard-write; clipboard-read"
-  referrerpolicy="origin"></iframe>
+  allowfullscreen></iframe>
 
 <!-- Escape hatch: if the embed can't read your Claude session (third-party
      cookie blocking), this opens the artifact top-level, where it always works. -->
-<!-- ARTIFACT_URL (2 of 2) -->
+<!-- Escape hatch: top-level link, works regardless of frame policy -->
 <a id="escape" href="https://claude.ai/public/artifacts/e50d90d5-0ba1-4372-9621-b3d939eaa5e1" target="_top" rel="noopener">Open directly</a>
 
 <div id="hint">
